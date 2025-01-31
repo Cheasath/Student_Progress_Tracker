@@ -9,7 +9,7 @@ const AddStudent = () => {
 
   const onSubmit = async (data) => {
     try {
-     const res= await axios.post("http://localhost:3001/students/add", data);
+     const res= await axios.post("https://student-progress-tracker.onrender.com/students/add", data);
      if(res.data.success) {
       alert("Student added successfully");
       navigate("/history");

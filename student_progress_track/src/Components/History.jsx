@@ -12,7 +12,7 @@ const History = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/students"); // Adjust if backend runs on a different port
+        const res = await axios.get("https://student-progress-tracker.onrender.com/students"); // Adjust if backend runs on a different port
         setStudents(res.data);
       } catch (error) {
         console.error("Error fetching students:", error);
@@ -23,7 +23,7 @@ const History = () => {
 
   const deleteStudent = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/students/${id}`);
+      await axios.delete(`https://student-progress-tracker.onrender.com/students/${id}`);
       setStudents(students.filter(student => student._id !== id));
     } catch (error) {
       console.error("Error deleting student:", error);

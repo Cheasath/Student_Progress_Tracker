@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:3001/auth/login", { email, password });
+      const res = await axios.post("https://student-progress-tracker.onrender.com/auth/login", { email, password });
       if(res.data.statuscode){
         alert(res.data.message);
         navigate('/add-student');

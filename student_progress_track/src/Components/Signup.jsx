@@ -9,7 +9,7 @@ const Signup = () => {
 
   const handleSignup = async () => {
     try {
-      await axios.post("http://localhost:3001/auth/signup", { email, password });
+      await axios.post("https://student-progress-tracker.onrender.com/auth/signup", { email, password });
       alert("Signup Successful. Please Login.");
       navigate("/login");
     } catch (error) {
